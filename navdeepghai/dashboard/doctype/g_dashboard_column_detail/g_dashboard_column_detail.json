@@ -1,0 +1,76 @@
+{
+ "creation": "2020-05-08 17:30:19.332655",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_name",
+  "fieldname",
+  "fieldtype",
+  "label",
+  "reqd",
+  "column_break_5",
+  "options",
+  "default"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Column Name"
+  },
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fieldname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Small Text",
+   "label": "Options"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqd",
+   "fieldtype": "Check",
+   "label": "Reqd"
+  },
+  {
+   "fieldname": "default",
+   "fieldtype": "Small Text",
+   "label": "Default"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fieldtype",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fieldtype",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-11 11:29:40.022153",
+ "modified_by": "Administrator",
+ "module": "Dashboard",
+ "name": "G Dashboard Column Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,41 @@
+{%- set print_section = True -%}
+{%- set title = "Payment Receipt" -%}
+{%- include "templates/print_formats/header.html"  -%}
+
+<div class="row">
+    <div class="col-xs-3">
+        <h4>
+            <strong>{{_("Customer ")}}</strong>
+        </h4>
+    </div>
+    <div class="col-xs-3">
+        <h4>
+            {{ doc.party_name}}
+        </h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-3">
+        <h4>
+            <strong>{{_("Date ")}}</strong>
+        </h4>
+    </div>
+    <div class="col-xs-3">
+        <h4>
+            {{ frappe.utils.getdate(doc.posting_date).strftime("%B %d, %Y") }}
+        </h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-3">
+        <h4>
+            {{_("Paid Amount")}}
+        </h4>
+    </div>
+    <div class="col-xs-3">
+        <h4>
+            {{ frappe.utils.fmt_money(doc.paid_amount, 2, "USD")}}
+        </h4>
+    </div>
+
+</div>

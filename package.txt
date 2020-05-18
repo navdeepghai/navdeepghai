@@ -1,0 +1,5 @@
+npm install --save @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid @fullcalendar/list @fullcalendar/timeline
+@fullcalendar/bootstrap @fullcalendar/google-calendar @fullcalendar/moment @fullcalendar/moment-timezone @fullcalendar/vue
+
+npm install lazysizes --save
+npm install leaflet

@@ -1,0 +1,44 @@
+{% set sales_invoice = frappe.get_doc("Sales Invoice", sales_invoice) -%}
+<div class="">
+	<p style="margin-bottom:10px;"><b>Dear {{ sales_invoice.customer_name.split(" ")[0] }},</b></p>
+    <p>
+        Thank you for choosing Germbusters Disinfection Service.
+    </p>
+    <p>
+        Your appointment details are below:
+    </p>
+    <table class="table" style="margin-top:10px; margin-bottom:10px;">
+        <tr>
+		<td><b>{{_("Booking Date")}}</b></td>
+            <td>{{ frappe.utils.getdate(booking_date).strftime("%B %d, %Y") }}</td>
+        </tr>
+       <tr>
+	       <td><b>{{_("Total Qty")}}</b></td>
+            <td>{{ frappe.utils.cint(sales_invoice.total_qty) }}</td>
+        </tr>
+        <tr>
+		<td><b>{{_("Subtotal")}}</b></td>
+            <td>{{ frappe.utils.fmt_money(sales_invoice.total, 2, "USD" ) }}</td>
+        </tr>
+        {%- if sales_invoice.discount_amount -%}
+        <tr>
+		<td><b>{{_("Discount")}}</b></td>
+            <td>{{ frappe.utils.fmt_money(sales_invoice.discount_amount, 2, "USD" ) }}</td>
+        </tr>
+        <tr>
+		<td><b>{{_("Adjusted Subtotal")}}</b></td>
+            <td>{{ frappe.utils.fmt_money(sales_invoice.net_total, 2, "USD" ) }}</td>
+        </tr>
+        {%- endif -%}
+        <tr>
+		<td><b>{{_("Taxes")}}</b></td>
+            <td>{{ frappe.utils.fmt_money(sales_invoice.total_taxes_and_charges, 2, "USD" ) }}</td>
+        </tr>
+        <tr>
+		<td><b>{{_("Total")}}</b></td>
+            <td>{{ frappe.utils.fmt_money(sales_invoice.grand_total, 2, "USD" ) }}</td>
+        </tr>
+    </table>
+    <p>Click on link below to track the appointment:</p>
+    <p>   {{ tracking_url }}</p>
+</div>

@@ -1,0 +1,65 @@
+{
+ "autoname": "format:{parent}-{##}",
+ "creation": "2020-04-06 02:36:18.955053",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "image",
+  "section",
+  "button",
+  "route",
+  "text",
+  "website_route"
+ ],
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Section ",
+   "options": "Main\nMiddle\nBottom"
+  },
+  {
+   "fieldname": "button",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Button"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Text"
+  },
+  {
+   "fieldname": "website_route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website Route"
+  }
+ ],
+ "image_field": "image",
+ "istable": 1,
+ "modified": "2020-04-06 03:03:04.515432",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Carousel Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

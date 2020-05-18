@@ -1,0 +1,96 @@
+{
+ "creation": "2020-05-08 13:29:11.508883",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fieldtype",
+  "label",
+  "fieldname",
+  "options",
+  "columns",
+  "column_break_6",
+  "read_only",
+  "reqd",
+  "is_default",
+  "default"
+ ],
+ "fields": [
+  {
+   "fieldname": "fieldtype",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fieldtype",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fieldname",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "read_only",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Read Only "
+  },
+  {
+   "fieldname": "columns",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Columns"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Options",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "reqd",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default"
+  },
+  {
+   "fieldname": "default",
+   "fieldtype": "Data",
+   "label": "Default"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-10 13:06:12.649107",
+ "modified_by": "Administrator",
+ "module": "Dashboard",
+ "name": "G Dashboard Filter",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

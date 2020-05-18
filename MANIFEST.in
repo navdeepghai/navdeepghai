@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include germbusters *.css
+recursive-include germbusters *.csv
+recursive-include germbusters *.html
+recursive-include germbusters *.ico
+recursive-include germbusters *.js
+recursive-include germbusters *.json
+recursive-include germbusters *.md
+recursive-include germbusters *.png
+recursive-include germbusters *.py
+recursive-include germbusters *.svg
+recursive-include germbusters *.txt
+recursive-exclude germbusters *.pyc

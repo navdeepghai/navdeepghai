@@ -1,0 +1,64 @@
+{
+ "autoname": "format:{parent}-{##}",
+ "creation": "2020-04-06 02:37:38.935328",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "card_title",
+  "card_body",
+  "card_cb_column",
+  "card_button",
+  "card_route",
+  "card_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "card_title",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Card Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_body",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Card Body"
+  },
+  {
+   "fieldname": "card_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "card_route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Card Route"
+  },
+  {
+   "fieldname": "card_image",
+   "fieldtype": "Attach Image",
+   "label": "Card Image"
+  },
+  {
+   "fieldname": "card_button",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Card Button",
+   "reqd": 1
+  }
+ ],
+ "image_field": "card_image",
+ "istable": 1,
+ "modified": "2020-04-06 03:04:51.153415",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Card Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

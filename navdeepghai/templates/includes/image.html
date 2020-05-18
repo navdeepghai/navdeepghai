@@ -1,0 +1,103 @@
+{%- if image -%}
+    <div id="germbusters-section-hero-1" class="germbusters-section index-section index-section--flush">
+        {%- if image.image_set -%}
+            <ul class="image-set hidden" data-image-name="{{ image.name }}">
+                {%- for img in image.image_set or [] -%}
+                    <li image-min-width="{{img.min_width}}" image-max-width="{{ img.max_width}}"
+                        image-min-height="{{img.min_height}}" image-max-height="{{img.max_height}}"
+                        image-data="{{img.image}}""></li>
+                {%- endfor -%}
+            </ul>
+        {%- endif -%}
+        <div data-section-id="hero-1" data-section-type="hero-section">
+            {%- if text_top -%}
+                    <div data-section-id="" data-section-type="hero-section">
+                        <div class="hero hero--large hero-hero-1 hero__overlay box ratio-container js lazyloaded"
+                            data-layout="full_width" data-parent-fit="cover"
+                            data-bg="{{image.background_image}}"
+                            data-bgset="{{image.background_image}}"
+                            style="background-position: center center;background-image: url('{{image.background_image}}');"
+                            id="{{ image.name }}">
+                            <div class="hero__inner">
+                                {%- if text_top -%}
+                                        <div class="page-width">
+                                            <h1 class="h1 mega-title"><strong>{{ image.title  or '' }}</strong></h1>
+                                            <div class="rte-setting mega-subtitle">
+                                                <p>{{ image.text}}
+                                                </p>
+                                            </div>
+                                            {%- if image.button_title -%}
+                                            <a href="{{image.route}}" class="btn btn-primary hero__btn" aria-label="{{image.button_title}}:{{ image.title}}"
+                                                    title="{{image.button_title}}:{{ image.title}}">
+                                                {{ image.button_title }}
+                                            </a>
+                                            {%- endif -%}
+                                        </div>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+            {%- elif not text_top and image.sub_image -%}
+                <style>
+                    .box{
+                        background-color:white !important;
+                    }
+                    .hero__overlay::before{
+                        background-color:transparent;
+                    }
+                </style>
+                <div class="hero hero--medium hero-hero-1 hero__overlay box ratio-container js lazyloaded"
+                    data-layout="full_width" data-parent-fit="cover"
+                    data-bg="{{image.background_image}}"
+                    data-bgset="{{image.background_image}}"
+                    style="background-position: center center;
+                        background-image: url('{{image.background_image}}');"
+                    id="{{ image.name }}">
+                </div>
+                <div class="germbusters-section index-section">
+                    <div class="page-width">
+                        <div class="grid grid--uniform grid--flush-bottom">
+                            <div class="grid__item medium-up--one-half text-left">
+                                <h1 class="h1">{{ image.title  or '' }}</h1>
+                                <p>{{ image.text}}</p>
+                                {%- if image.button_title -%}
+                                <a href="{{image.route}}" class="btn hero__btn" aria-label="{{image.button_title}} : {{image.title}}"
+                                        title="{{image.button_title}}:{{ image.title}}">
+                                    {{ image.button_title }}
+                                </a>
+                                {%- endif -%}
+                            </div>
+                            <div class="grid__item medium-up--one-half text-left" style="margin-top:0;">
+                                <div class="hero__inner">
+                                    <img src="{{ image.sub_image }}" alt="{{image.title}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%- else -%}
+                <div class="hero hero--medium hero-hero-1 hero__overlay box ratio-container js lazyloaded"
+                    data-layout="full_width" data-parent-fit="cover"
+                    data-bg="{{image.background_image}}"
+                    data-bgset="{{image.background_image}}"
+                    style="background-position: center center;background-size:contain;
+                    background-image: url('{{image.background_image}}');"
+                    id="{{ image.name }}">
+
+                </div>
+                <div class="germbusters-section index-section" style="margin-bottom:40px;">
+                    <div class="page-width">
+                        <h1  class="headling-title">{{ image.title  or '' }}</h1>
+                        <p>{{ image.text}}</p>
+                        {%- if image.button_title -%}
+                            <a href="{{image.route}}" class="btn hero__btn" aria-label="{{image.button_title}}: {{image.title}}"
+                                                    title="{{image.button_title}}:{{ image.title}}">
+                                {{ image.button_title }}
+                            </a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            {%- endif -%}
+        </div>
+    </div>
+{%- endif -%}

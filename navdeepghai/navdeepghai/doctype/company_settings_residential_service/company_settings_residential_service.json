@@ -1,0 +1,114 @@
+{
+ "autoname": "RS-.########",
+ "creation": "2020-04-15 17:48:39.296937",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type",
+  "disinfection_system",
+  "unit",
+  "company_settings_service_item_cb_column",
+  "price",
+  "item",
+  "time_to_disinfect",
+  "item_price",
+  "item_group"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Category",
+   "options": "Service Category",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "default": "Dual-Phase Disinfection System",
+   "fieldname": "disinfection_system",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Disinfection System",
+   "options": "Disinfection System",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_settings_service_item_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "description": "Average time to disinfect in minutes",
+   "fieldname": "time_to_disinfect",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Time to Disinfect",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_price",
+   "fieldtype": "Link",
+   "label": "Item Price",
+   "options": "Item Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-04-27 14:41:45.049310",
+ "modified_by": "Administrator",
+ "module": "Germbusters",
+ "name": "Company Settings Residential Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

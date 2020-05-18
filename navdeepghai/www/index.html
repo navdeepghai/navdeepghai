@@ -1,0 +1,69 @@
+{% extends "navdeepghai/templates/web.html" %}
+
+{% block title %}
+    {{ _("Navdeep Ghai") }}
+{% endblock %}
+
+{%- block page_content -%}
+    <!-- START IMAGES IN TOP !-->
+    {%- if images -%}
+        {%- for image in images -%}
+            {% if image.section == "Main" -%}
+                {{ frappe.render_template("navdeepghai/templates/includes/image.html",{
+                    "image": image,  "height": '650px', 'opacity': 0.9,
+                    'text_top': 1})
+                }}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+    <!-- END IMAGES IN TOP !-->
+
+    <!-- CAROUSEL MAIN START !-->
+    {%- if carousels -%}
+        {%- for carousel in carousels -%}
+            {%- if carousel.section == "Main" -%}
+                {{ frappe.render_template("navdeepghai/templates/includes/carousel.html", {"carousel": carousel }) }}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+    <!-- CAROUSEL MAIN END !-->
+
+    <!-- MIDDLE IMAGES IN MIDDILE !-->
+    {%- if images -%}
+        {%- for image in images -%}
+            {% if image.section == "Middle" -%}
+                {{ frappe.render_template("navdeepghai/templates/includes/image.html", {
+                    "image": image, 'text_top': 1, 'height': '650px'})
+                }}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+    <!-- MIDDLE IMAGES IN MIDDILE !-->
+
+    <!-- CARDS !-->
+    {%- if body_cards -%}
+        {%- for card in body_cards -%}
+            {{ frappe.render_template("navdeepghai/templates/includes/card.html", {"card": card}) }}
+        {%- endfor -%}
+    {%- endif -%}
+    <!-- CARD !-->
+
+    <!-- START IMAGES IN BOTTOM !-->
+    {%- if images -%}
+        {%- for image in images -%}
+            {% if image.section == "Bottom" -%}
+                {{ frappe.render_template("navdeepghai/templates/includes/image.html", {
+                    "image": image, "opacity": 3,
+                    "text_top": 1, "height": '650px'})
+                }}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+    <!-- END IMAGES IN BOTTOM !-->
+{%- endblock -%}
+
+{%- block script -%}
+    <script type="text/javascript">
+        {%- include "templates/includes/homepage/index.js" -%}
+    </script>
+{%- endblock -%}

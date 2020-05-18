@@ -1,0 +1,38 @@
+{% extends "navdeepghai/templates/web.html" %}
+{% block title %}
+    {{ _("About Us") }}
+{% endblock %}
+
+{%- block page_content -%}
+    <div id="navdeepghai-section-1585967492891" class="navdeepghai-section index-section">
+        <div class="page-width rich-text">
+            {%- if aboutus -%}
+                <div>
+                        {{ aboutus.company_introduction or ""}}
+                </div>
+                <ul class="site-footer__linklist">
+					<li class="site-footer__linklist-item">
+                        <a href="tel:{{aboutus.contact_mobile}}" target="_blank"><i class="fas fa-phone-alt"></i> {{ aboutus.contact_mobile }}</a>
+					</li>
+                    <li class="site-footer__linklist-item">
+                        <a href="{{aboutus.contact_fb}}"target="_blank" ><i class="fab fa-facebook-messenger"></i> {{aboutus.contact_fb}}</a>
+					</li>
+                    <li class="site-footer__linklist-item">
+                        <a href="mailto:{{aboutus.contact_email}}" target="_blank"><i class="fas fa-envelope"></i> {{ aboutus.contact_email}}</a>
+					</li>
+                    <li class="site-footer__linklist-item aboutus-long-address">
+					</li>
+				</ul>
+                {{ aboutus }}
+            {%- endif -%}
+        </div>
+        <div class="page-width">
+            <div id="aboutus-map" style="height:500px;"></div>
+        </div>
+    </div>
+{%- endblock -%}
+{%- block script -%}
+    <script>
+        {%- include "templates/includes/aboutus/aboutus.js" -%}
+    </script>
+{%- endblock -%}

@@ -1,0 +1,23 @@
+<div class="announcement-bar hidden" style="background-color:#d2f8ed;">
+	<p class="announcement-bar__message">{{ settings.announcement}}</p>
+</div>
+<nav class="navbar navbar-light bg-white navbar-expand-lg sticky-top shadow-sm">
+	<div class="container-fluid">
+		<a class="navbar-brand js-scroll-trigger" href="{{ url_prefix }}{{ home_page or "/" }}">
+			<span>{{ brand_html or (frappe.get_hooks("brand_html") or [_("Home")])[0] }}</span>
+		</a>
+		<button class="navbar-toggler" type="button"
+			data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			{% include "templates/includes/navbar/navbar_items.html" %}
+		</div>
+	</div>
+</nav>

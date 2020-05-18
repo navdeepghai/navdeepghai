@@ -1,0 +1,121 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:doctype_name",
+ "creation": "2020-05-08 13:21:55.458599",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_name",
+  "enable_page",
+  "is_default",
+  "default_items",
+  "filters",
+  "sidebar_items",
+  "columns",
+  "columns_details",
+  "template_type",
+  "js_controller_path",
+  "page_js_controller_path"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctype Name",
+   "options": "DocType",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "filters",
+   "fieldtype": "Table",
+   "label": "Filters",
+   "options": "G Dashboard Filter"
+  },
+  {
+   "fieldname": "sidebar_items",
+   "fieldtype": "Table",
+   "label": "Sidebar Items",
+   "options": "G Dashboard Sidebar"
+  },
+  {
+   "default": "Includes",
+   "description": "JS controller path must be in \ngermbusters/dashboard/doctype-name/g_dashboard.js",
+   "fieldname": "template_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Template Type",
+   "options": "Includes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "js_controller_path",
+   "fieldtype": "Small Text",
+   "label": "JS Controller Path",
+   "read_only": 1
+  },
+  {
+   "fieldname": "columns",
+   "fieldtype": "Table",
+   "label": "Columns",
+   "options": "G Dashboard Column"
+  },
+  {
+   "fieldname": "columns_details",
+   "fieldtype": "Table",
+   "label": "Columns Details",
+   "options": "G Dashboard Column Detail"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default"
+  },
+  {
+   "depends_on": "eval: doc.is_default===1",
+   "fieldname": "default_items",
+   "fieldtype": "Table",
+   "label": "Default Items",
+   "options": "G Dashboard Role Profile"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_page",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enable Page"
+  },
+  {
+   "fieldname": "page_js_controller_path",
+   "fieldtype": "Small Text",
+   "label": "Page JS Controller Path",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-05-11 11:37:27.138139",
+ "modified_by": "Administrator",
+ "module": "Dashboard",
+ "name": "G Dashboard",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,80 @@
+{%- if carousel -%}
+    {%- if carousel.header -%}
+        <div id="germbusters-section-1585967492891" class="germbusters-section index-section"
+                            {%- if carousel.color -%}
+                                style="background-color:{{carousel.color}}; padding-top:0; padding-bottom:0;"
+                            {%- endif -%}>
+            <div class="page-width rich-text">
+                <div class="grid">
+                    <div class="grid__item ">
+                        <div class="rich-text__heading--medium text-center">
+                            <span>&nbsp;</span>
+                            <h2 class="h2 headling-title">
+                                <strong>{{ carousel.header }}</strong>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {%- endif -%}
+    <div id="germbusters-section-1585967492891" class="germbusters-section index-section">
+        <div class="page-width">
+            <div class="feature-row">
+                <div class="feature-row__item">
+                    <div class="feature-row__image-wrapper js">
+                        <div class="carousel slide carousel-fade {{ carousel.name }}" id="{{carousel.name}}" data-ride="carousel">
+                            <div class="carousel-inner text-center" style="margin:0 !import">
+                                {%- for item in carousel.get("carousels") -%}
+                                <div class="carousel-item text-center {{ 'active' if item.idx == 1 else ''}}">
+                                    <img class="d-block w-10"
+                                        src="{{item.image}}" alt="" style="margin:auto;">
+                                    </div>
+                                    {%- endfor -%}
+                                </div>
+                                <a class="carousel-control-prev" href="#{{carousel.name}}" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#{{carousel.name}}" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-row__item feature-row__text feature-row__text--left">
+                        <h2 class="h2 headling-title"><strong>{{carousel.title}}</strong></h2>
+                        <div class="rte rte-setting featured-row__subtext">
+                            <p>{{ carousel.text }}</p>
+                        </div>
+                        <a href="{{carousel.route}}" title="{{carousel.button}}" class="btn " aria-label="{{ carousel.button }}: {{carousel.button}}">
+                            {{ carousel.button  }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {%- if carousel.footer -%}
+        <div id="germbusters-section-1585967492891" class="germbusters-section index-section"
+                    {%- if carousel.color -%}
+                        style="background-color:{{carousel.color}};padding-top:0; padding-bottom:0;"
+                    {%- endif -%}>
+            <div class="page-width rich-text">
+                <div class="grid">
+                    <div class="grid__item ">
+                        <div class="rich-text__heading--medium text-center">
+                            <span>&nbsp;</span>
+                            <h2 class="h2 headling-title">
+                                <strong>{{ carousel.footer }}</strong>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {%- endif -%}
+{%- endif -%}
+
+{%- block script -%}
+{%- endblock -%}

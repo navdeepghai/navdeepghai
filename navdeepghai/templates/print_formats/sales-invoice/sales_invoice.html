@@ -1,0 +1,93 @@
+{%- set title = "Sales Invoice" -%}
+{%- include "templates/print_formats/header.html"  -%}
+{%- set customer_address_without_country  = frappe.db.get_value("Book Appointment", {"sales_invoice": doc.name}, "customer_address_without_country") -%}
+<style>
+	p{
+		padding:0px;
+	}
+</style>
+<div class="row" style="font-size:10px;">
+    <div class="col-xs-4">
+        <p><strong>{{_("Customer Name")}}</strong></p>
+        <p>{{ doc.customer_name}}</p>
+        <p><strong>{{_("Service Address")}}</strong></p>
+        <p>{{ doc.long_address}}</p>
+    </div>
+    <div class="col-xs-4">
+        <p><strong>{{_("Invoice Date")}}</strong></p>
+        <p>{{ frappe.utils.getdate(doc.posting_date).strftime("%B %d, %Y") }}</p>
+        <p><strong>{{_("Payment Terms")}}</strong></p>
+	<p>{{ doc.payment_terms_template }} &mdash; {{ frappe.utils.getdate(doc.due_date).strftime("%B %d, %Y") }}</p>
+    </div>
+    <div class="col-xs-4">
+        <p><strong>{{_("Make Checks Payable")}}</strong></p>
+	<p>"{{doc.company}}"<br>
+		820 US-1, Iselin, NJ 08830
+	</p>
+	</div>
+</div>
+    <!--
+    <div class="col-xs-12">
+        <p><strong>{{_("Service Address")}}</strong></p>
+    </div>
+    <div class="col-xs-12">
+        <p>{{ customer_address_without_country }}</p>
+    </div>
+    !-->
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-bordered table-sm" style="font-size:10px;">
+            <thead>
+                <th style="width:35%;">{{_("Service Type")}}</th>
+                <th style="width:30%;">{{_("Target")}}</th>
+                <th style="width:8%;" class='text-center'>{{_("Qty")}}</th>
+                <th style="width:12%;" class="text-right">{{_("Rate")}}</th>
+                <th style="width:15%;" class="text-right">{{_("Amount")}}</th>
+            </thead>
+            <tbody>
+                {%- for item in doc.items -%}
+                    <tr>
+                        <td style="width:35%;">{{ item.disinfection_system or item.item_group}}</td>
+            			<td style="width:30%;">
+            				<span><b>{{item.item_code }}</b><span><br>
+            				<span>{{ item.description }}
+            			</td>
+                        <td style="width:8%;" class="text-center">{{frappe.utils.cint(item.qty) }}</td>
+                        <td style="width:12%;" class="text-right">{{frappe.utils.fmt_money(item.rate, 2, "USD")}}</td>
+                        <td style="width:15%;" class="text-right">{{frappe.utils.fmt_money(item.amount, 2, "USD") }}</td>
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+        <table style="width:100%;font-weight:bold;font-size:10px;" >
+                <tr>
+                    <td style="width:40%;" colspan="2"></td>
+		    <td style="width:30%; padding: 2px !important;">{{ _("Total Targets")}}</td>
+		    <td style="width:30%; padding: 2px !important;" class="text-right">{{ _(frappe.utils.cint(doc.total_qty) )}}</td>
+                </tr>
+                <tr>
+                    <td style="width:40%;" colspan="2"></td>
+		    <td style="width:30%; padding: 2px !important;">{{ _("Subtotal")}}</td>
+		    <td style="width:30%;padding: 2px !important;" class="text-right">{{ frappe.utils.fmt_money(doc.total, 2, "USD")}}</td>
+                </tr>
+                {%- if doc.discount_amount -%}
+                    <tr>
+                        <td style="width:40%;" colspan="2"></td>
+			<td style="width:30%;padding: 2px !important;">{{ _("Discount")}}</td>
+			<td style="width:30%;padding: 2px !important;" class="text-right">{{ frappe.utils.fmt_money(doc.discount_amount, 2, "USD")}}</td>
+                    </tr>
+                {%- endif -%}
+                <tr>
+                    <td style="width:40%;" colspan="2"></td>
+		    <td style="width:30%;padding: 2px !important;">{{ doc.taxes_and_charges or "Taxes" }}</td>
+		    <td style="width:30%;padding: 2px !important;" class="text-right">{{ frappe.utils.fmt_money(doc.total_taxes_and_charges, 2, "USD")}}</td>
+                </tr>
+                <tr>
+                    <td style="width:40%;" colspan="2"></td>
+		    <td style="width:30%;padding: 2px !important;">{{ _("Total")}}</td>
+		    <td style="width:30%;padding: 2px !important;" class="text-right">{{ frappe.utils.fmt_money(doc.grand_total, 2, "USD") }}</td>
+                </tr>
+        </table>
+    </div>
+</div>

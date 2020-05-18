@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/css/dashboard/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/css/dashboard/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/css/dashboard/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/css/dashboard/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/css/dashboard/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/css/dashboard/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/css/dashboard/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/css/dashboard/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/css/dashboard/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/css/dashboard/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/css/dashboard/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/css/dashboard/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/css/dashboard/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="germbusters">
+
+	{% block meta_block %}
+		{% include "templates/includes/meta_block.html" %}
+	{% endblock %}
+	<meta name="google-site-verification" content="kUUdlsTCQM8hcxEo3jWfg4Lf02rzhQP0mF9Q3HUISLs" />
+	<link rel="alternate" href="https://mygermbusters.com" hreflang="en-us">
+	<meta http-equiv="content-language" content="en-us" />
+	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
+	<link rel="shortcut icon" href="/assets/germbusters/images/favicon.png" type="image/x-icon">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163338535-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments	);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-163338535-1');
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-163338535-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WW3MQRX');
+	</script>
+	<!-- End Google Tag Manager -->
+	{%- block head -%}
+		{% if head_html is defined -%}
+		{{ head_html or "" }}
+		{%- endif %}
+
+
+		{%- for link in web_include_css %}
+		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
+		{%- endfor -%}
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web-b4.css">
+		<link type="text/css" rel="stylesheet" href="/assets/css/germbusters.lib.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/assets/css/germbusters.web.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/assets/css/germbusters-dashboard-min.css"/>
+		<style>
+		body{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		}
+		h1 {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		}
+		 h3 {
+			 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		 }
+		 h4 {
+			 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		 }
+		 h5 {
+			 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		 }
+		p {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		}
+		th,td{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		}
+
+		th{
+			font-size:18px;
+		}
+
+		</style>
+	{%- endblock -%}
+
+	{%- block style %}{%- endblock -%}
+
+	<script>
+		window.frappe = {};
+		window.germbusters = {};
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window._version_number = "{{ build_version }}";
+		// browser support
+		window.app = true;
+		window.dev_server = {{ dev_server }};
+		frappe.boot = {{ boot or {}}};
+		frappe.csrf_token = "{{ csrf_token }}";
+		frappe.user_id = "{{ frappe.session.user }}"
+		window.dev_server = {{ dev_server }};
+		window.socketio_port = {{ frappe.socketio_port }};
+		frappe.sys_defaults = {{ defaults or {} }};
+		germbusters.boot_context = {{ boot_context or {} }};
+    </script>
+</head>
+<body class="template-index c-app" frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {% endif -%}>
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW3MQRX"
+			height="0" width="0" style="display:none;visibility:hidden">
+		</iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	{%- include "germbusters/templates/dashboard/sidebar.html" -%}
+	<div class="c-wrapper c-fixed-components">
+		{% include "germbusters/templates/dashboard/header.html" %}
+		<div class="c-body">
+
+			{% block content %}
+				{{ content }}
+			{% endblock %}
+
+			{%- block footer -%}
+				{% include "germbusters/templates/dashboard/footer.html" %}
+			{%- endblock -%}
+		</div>
+	</div>
+	{% block base_scripts %}
+	<!-- js should be loaded in body! -->
+
+	<!-- load default libs!-->
+	<script tyle="text/javascript" src="/assets/js/germbusters.lib.min.js"></script>
+	<script type="text/javascript" src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/assets/js/germbusters-dashboard.min.js"></script>
+
+	{% endblock %}
+
+	{%- block script %}{%- endblock %}
+	<!-- csrf_token -->
+	{%- block body_include %}{{ body_include or "" }}{% endblock -%}
+</body>
+</html>

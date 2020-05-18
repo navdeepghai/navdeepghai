@@ -1,0 +1,100 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-04-04 01:48:26.350748",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "website_route",
+  "card_header",
+  "color",
+  "card_cb_column",
+  "card_type",
+  "footer_title",
+  "items_sb",
+  "cards",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "website_route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website Route",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "footer_title",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Card Footer",
+   "reqd": 1
+  },
+  {
+   "default": "WC-.######",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "WC-.######",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "items_sb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Card",
+   "fieldname": "card_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Card Type",
+   "options": "Card\nCard Group\nCard Deck"
+  },
+  {
+   "fieldname": "card_header",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Card Header"
+  },
+  {
+   "fieldname": "cards",
+   "fieldtype": "Table",
+   "label": "Cards",
+   "options": "Website Card Item"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  }
+ ],
+ "modified": "2020-04-07 12:54:12.678356",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,117 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-04-05 21:46:15.924774",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "background_image",
+  "website_route",
+  "section",
+  "title",
+  "column_break_4",
+  "sub_image",
+  "route",
+  "button_title",
+  "image_set",
+  "section_break_8",
+  "text",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "background_image",
+   "fieldtype": "Attach Image",
+   "label": "Background Image"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Text"
+  },
+  {
+   "fieldname": "button_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Button Title"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "default": "WI-.#######",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series",
+   "options": "WI-.#######",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website_route",
+   "fieldtype": "Data",
+   "label": "Website Route"
+  },
+  {
+   "default": "Main",
+   "fieldname": "section",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "Main\nMiddle\nBottom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_image",
+   "fieldtype": "Attach Image",
+   "label": "Sub Image"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "label": "Title"
+  },
+  {
+   "fieldname": "image_set",
+   "fieldtype": "Link",
+   "label": "Image Set",
+   "options": "Website Image Set"
+  }
+ ],
+ "image_field": "background_image",
+ "modified": "2020-04-08 12:17:53.668956",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Image",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "route",
+ "track_changes": 1
+}

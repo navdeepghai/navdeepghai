@@ -1,0 +1,134 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-04-05 23:37:24.640417",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_horizontal",
+  "website_route",
+  "button",
+  "text",
+  "color",
+  "footer",
+  "column_break_5",
+  "is_vertical",
+  "route",
+  "section",
+  "title",
+  "header",
+  "items_sb_section",
+  "carousels",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "button",
+   "fieldtype": "Data",
+   "label": "Button"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text Editor",
+   "label": "Text"
+  },
+  {
+   "default": "WC-.######",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "WC-.######",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website_route",
+   "fieldtype": "Data",
+   "label": "Website Route"
+  },
+  {
+   "fieldname": "items_sb_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_horizontal",
+   "fieldtype": "Check",
+   "label": "Is Horizontal"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_vertical",
+   "fieldtype": "Check",
+   "label": "Is Vertical"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Main",
+   "fieldname": "section",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "Main\nMiddle\nBottom"
+  },
+  {
+   "fieldname": "carousels",
+   "fieldtype": "Table",
+   "label": "Carousels",
+   "options": "Website Carousel Item"
+  },
+  {
+   "fieldname": "footer",
+   "fieldtype": "Text Editor",
+   "label": "Footer"
+  },
+  {
+   "fieldname": "header",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Header",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "label": "Title"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  }
+ ],
+ "modified": "2020-04-07 12:45:53.083133",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Carousel",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,23 @@
+{% extends "germbusters/templates/base_dashboard.html" %}
+{% block hero %}{% endblock %}
+
+{% block content %}
+
+{% macro main_content() %}
+	<div class="page_content container-fluid">
+		<!-- breadcrumbs -->
+		{% block page_container %}
+			<div class="page-content-wrapper page-container drawer-page-content fade-in" id="PageContainer">
+				{%- block page_content -%}{%- endblock -%}
+			</div>
+		{% endblock %}
+	</div>
+
+{% endmacro %}
+
+{% macro container_attributes() %}
+{% endmacro %}
+<main class=" js-focus-hidden c-main" id="MainContent" role="main" tabindex="-1">
+	{{ main_content() }}
+</main>
+{% endblock %}

@@ -1,0 +1,160 @@
+{
+    "css/navdeepghai.web.min.css":[
+        "frappe:public/less/controls.less",
+        "frappe:public/less/desk.less",
+        "public/js/libs/bootstrap-timepicker/timepicker.less",
+        "public/css/website/navdeepghai.web.css"
+    ],
+    "js/navdeepghai.web.min.js":[
+        "frappe:public/js/frappe/class.js",
+        "frappe:public/js/frappe/polyfill.js",
+        "frappe:public/js/lib/md5.min.js",
+        "frappe:public/js/frappe/provide.js",
+        "frappe:public/js/frappe/format.js",
+        "frappe:public/js/frappe/utils/number_format.js",
+        "frappe:public/js/frappe/utils/utils.js",
+        "frappe:public/js/frappe/utils/common.js",
+        "public/js/frappe/ui/messages.js",
+        "frappe:public/js/frappe/translate.js",
+        "frappe:public/js/frappe/utils/pretty_date.js",
+        "frappe:public/js/frappe/microtemplate.js",
+        "frappe:public/js/frappe/query_string.js",
+
+        "frappe:public/js/frappe/ui/dropzone.js",
+        "frappe:public/js/frappe/ui/upload.html",
+
+        "frappe:public/js/frappe/model/meta.js",
+        "frappe:public/js/frappe/model/model.js",
+        "frappe:public/js/frappe/model/perm.js",
+
+        "website/js/website.js",
+        "frappe:public/js/frappe/utils/rating_icons.html",
+        "frappe:public/js/frappe/socketio_client.js",
+
+        "frappe:public/js/frappe/utils/datetime.js",
+        "frappe:public/js/lib/datepicker/datepicker.min.js",
+        "frappe:public/js/lib/datepicker/datepicker.en.js",
+
+        "frappe:public/js/frappe/form/formatters.js",
+        "frappe:public/js/frappe/form/controls/control.js",
+
+        "public/js/libs/bootstrap-timepicker/bootstrap-timepicker.js",
+        "public/js/website/location_services.js",
+        "public/js/frappe/ui/dialog.js",
+
+        "public/js/website/navdeepghai.web.js"
+    ],
+    "concat:css/navdeepghai.lib.min.css":[
+        "node_modules/leaflet/dist/leaflet.css",
+        "node_modules/leaflet-draw/dist/leaflet.draw.css",
+        "node_modules/leaflet.locatecontrol/src/L.Control.Locate.scss",
+        "node_modules/leaflet-easybutton/src/easy-button.css",
+        "node_modules/leaflet.fullscreen/Control.FullScreen.css",
+        "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css",
+        "node_modules/@fullcalendar/core/main.css",
+        "node_modules/@fullcalendar/daygrid/main.css",
+        "node_modules/@fullcalendar/timegrid/main.css",
+        "node_modules/@fullcalendar/bootstrap/main.css",
+        "public/css/website/theme.css",
+        "node_modules/datatables.net-dt/css/jquery.dataTables.css"
+    ],
+    "concat:js/navdeepghai.lib.min.js":[
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/popper.js/dist/umd/popper.min.js",
+        "node_modules/moment/min/moment-with-locales.min.js",
+        "node_modules/moment-timezone/builds/moment-timezone-with-data.min.js",
+        "node_modules/@fullcalendar/core/main.js",
+        "node_modules/@fullcalendar/daygrid/main.js",
+        "node_modules/@fullcalendar/google-calendar/main.js",
+        "node_modules/@fullcalendar/interaction/main.js",
+        "node_modules/@fullcalendar/timegrid/main.js",
+        "node_modules/@fullcalendar/bootstrap/main.js",
+
+        "node_modules/lazysizes/lazysizes.min.js",
+
+        "public/js/website/vendor.js",
+        "public/js/website/theme.js",
+
+        "node_modules/vue/dist/vue.js",
+
+        "node_modules/leaflet/dist/leaflet.js",
+        "node_modules/leaflet-draw/dist/leaflet.draw.js",
+        "node_modules/leaflet.locatecontrol/src/L.Control.Locate.js",
+        "node_modules/leaflet-easybutton/src/easy-button.js",
+        "node_modules/leaflet.fullscreen/Control.FullScreen.js",
+        "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js",
+        "node_modules/datatables.net-dt/js/dataTables.dataTables.min.js"
+    ],
+    "css/navdeepghai.app.min.css":[
+        "public/css/navdeepghai.app.css",
+        "public/js/libs/bootstrap-timepicker/timepicker.less"
+    ],
+    "js/navdeepghai.app.min.js":[
+        "public/js/navdeepghai.app.js",
+        "public/js/libs/bootstrap-timepicker/bootstrap-timepicker.js",
+        "public/js/website/location_services.js"
+    ],
+    "css/navdeepghai-dashboard-min.css":[
+        "public/css/dashboard/scss/vendors/pace-progress/pace.scss",
+        "public/css/dashboard/scss/style.scss"
+
+    ],
+    "js/navdeepghai-dashboard.min.js":[
+        "node_modules/@coreui/coreui/dist/js/coreui.bundle.min.js",
+        "node_modules/@coreui/icons/js/svgxuse.min.js",
+        "node_modules/@coreui/chartjs/dist/js/coreui-chartjs.bundle.js",
+        "node_modules/@coreui/utils/dist/coreui-utils.js",
+        "frappe:public/js/frappe/class.js",
+        "frappe:public/js/frappe/polyfill.js",
+        "frappe:public/js/frappe/provide.js",
+        "frappe:public/js/frappe/format.js",
+
+        "frappe:public/js/frappe/request.js",
+
+        "frappe:public/js/lib/md5.min.js",
+        "frappe:public/js/frappe/utils/user.js",
+        "frappe:public/js/frappe/utils/common.js",
+        "frappe:public/js/frappe/utils/urllib.js",
+        "frappe:public/js/frappe/utils/pretty_date.js",
+        "frappe:public/js/frappe/utils/test_utils.js",
+        "frappe:public/js/frappe/utils/tools.js",
+        "frappe:public/js/frappe/utils/datetime.js",
+        "frappe:public/js/frappe/utils/number_format.js",
+        "frappe:public/js/frappe/utils/help.js",
+        "frappe:public/js/frappe/utils/help_links.js",
+        "frappe:public/js/frappe/utils/address_and_contact.js",
+        "frappe:public/js/frappe/utils/preview_email.js",
+        "frappe:public/js/frappe/utils/file_manager.js",
+        "frappe:public/js/frappe/utils/utils.js",
+
+        "public/js/frappe/ui/messages.js",
+        "frappe:public/js/frappe/translate.js",
+        "frappe:public/js/frappe/utils/pretty_date.js",
+        "frappe:public/js/frappe/microtemplate.js",
+        "frappe:public/js/frappe/query_string.js",
+
+        "frappe:public/js/frappe/ui/dropzone.js",
+        "frappe:public/js/frappe/ui/upload.html",
+
+        "frappe:public/js/frappe/model/meta.js",
+        "frappe:public/js/frappe/model/model.js",
+        "frappe:public/js/frappe/model/perm.js",
+
+        "website/js/website.js",
+        "frappe:public/js/frappe/utils/rating_icons.html",
+        "frappe:public/js/frappe/socketio_client.js",
+
+        "frappe:public/js/frappe/utils/datetime.js",
+        "frappe:public/js/lib/datepicker/datepicker.min.js",
+        "frappe:public/js/lib/datepicker/datepicker.en.js",
+
+        "frappe:public/js/frappe/form/formatters.js",
+        "frappe:public/js/frappe/form/controls/control.js",
+
+        "public/js/libs/bootstrap-timepicker/bootstrap-timepicker.js",
+        "public/js/website/location_services.js",
+        "public/js/frappe/ui/dialog.js",
+
+        "public/js/website/navdeepghai.web.js"
+    ]
+}

@@ -1,0 +1,164 @@
+/*
+    Developer Navdeep
+*/
+
+.btn-primary{
+    color: white !important;
+    background-color: #007bff !important;
+    border: none !important;
+    font-size: 13px;
+    padding: 10px 18px;
+    text-transform: uppercase;
+    radius: 0;
+    border-radius: 0;
+}
+
+.btn-primary:hover{
+    opacity: 0.6;
+}
+.img-thumbnail{
+    border-radius: 0;
+    border: none;
+}
+
+.btn-none-form{
+    margin-top: 27.5px;
+}
+
+.title-heading{
+    margin-top:50px;
+    margin-bottom:40px;
+}
+
+.image-title{
+    text-shadow: 0 0 4px rgba(0,0,0,0.4);
+    font-size: 1.26667em;
+    line-height: 1.5;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover{
+    opacity: 0.5;
+}
+
+.footer-col{
+    padding: 45px 15px 55px 15px;
+    margin-top:50px;
+}
+
+.page-footer{
+    background-color: #f6f6f6;
+}
+
+.section-head{
+    margin-left: 1% !important;
+}
+.form-section-heading{
+    color:black !important;
+    margin: 15px 0 0 0 !important;
+    font-weight: 900 !important;
+    font-size: 15px !important;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    color: #3a3a3a;
+    line-height: 1.5;
+}
+
+.indicator.blue::before, .indicator-right.blue::after{
+    background:#007bff !important
+}
+
+@media screen and (max-width: 600px) {
+    .calendar-content{
+        font-size: 7px !important;
+    }
+    .fc-toolbar.fc-header-toolbar{
+        font-size: 10px !important;
+    }
+}
+
+.appointment-calendar{
+    vertical-align: middle !important;
+}
+
+.datepicker--time-row > input {
+    /* border: 1px solid #ccc; */
+    border: 1px solid white !important;
+}
+
+.modal{
+    background-color: transparent !important;
+}
+
+.btn-secondary{
+    background-color:#f8f9fa !important;
+    color:black !important;
+}
+.modal-header {
+    margin-top:10px !important;
+}
+
+.modal-header .navdeepghai-buttons{
+    /*margin-top:10px;*/
+}
+
+.modal-backdrop.show{
+    opacity: 0.5 !important;
+}
+#freeze.in{
+    z-index: 3000 !important;
+}
+.modal-footer {
+    border-top: 0 none;
+}
+/* W3 */
+.loader {
+  border: 6px solid #f3f3f3;
+  margin:auto;
+  border-radius: 50%;
+  border-top: 6px solid #007bff;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.btn-info{
+    background-color: #007bff !important;
+    color:white !important;
+    border-color:#007bff !important;
+}
+.btn-info:hover{
+    background-color: #007bff !important;
+    opacity: 0.7 !important;;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* W3 */
+
+#freeze .freeze-message{
+    z-index:4000 !important;
+}
+.modal:hover{
+    opacity: 1 !important;
+}

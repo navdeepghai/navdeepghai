@@ -1,0 +1,42 @@
+<header>
+	<nav class="navbar navbar-light bg-white navbar-expand-lg sticky-top shadow-sm">
+		<div class="container-fluid">
+			<button style="margin-left:0 !important;min-width:auto!important;padding:0 !important;"
+				class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button"
+				data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true"
+			>
+				<i class="fas fa-bars"></i>
+			</button>
+			<a style="margin-left: 12px;" class="navbar-brand js-scroll-trigger" href="{{ url_prefix }}{{ home_page or "/" }}">
+				<span>{{ brand_html or (frappe.get_hooks("brand_html") or [_("Home")])[0] }}</span>
+			</a>
+			{% if not only_static %}
+
+				{% if frappe.session.user != 'Guest' %}
+				<li class="nav-item dropdown logged-in" id="website-post-login" data-label="website-post-login" style="display: none">
+					<a href="#" class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown" style="color:#4f5d73 !important;">
+						<span class="user-image-wrapper"></span>
+						<span class="full-name"></span>
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right text-uppercase" role="menu">
+						{%- for child in post_login -%}
+						{%- if child.url -%}
+						<a class="dropdown-item text-uppercase" href="{{ child.url | abs_url }}" {{ child.target or '' }} rel="nofollow">
+							{{ child.label }}
+						</a>
+						{%- endif -%}
+						{%- endfor -%}
+					</ul>
+				</li>
+				{% endif %}
+
+				{% if not hide_login %}
+				<li class="nav-item">
+					<a class="nav-link btn-login-area text-uppercase" href="/login">{{ _("Login") }}</a>
+				</li>
+				{% endif %}
+			{% endif %}
+		</div>
+	</nav>
+</header>

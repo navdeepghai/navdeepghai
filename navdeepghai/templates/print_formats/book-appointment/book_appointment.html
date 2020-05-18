@@ -1,0 +1,105 @@
+{%- set print_section = True -%}
+{%- set si = frappe.get_doc("Sales Invoice", doc.sales_invoice ) -%}
+{%- set title = "Booking Confirmation" -%}
+{%- include "templates/print_formats/header.html"  -%}
+
+<div class="row">
+    <div class="col-xs-12">
+        <p><strong>{{_("Customer Name")}}</strong></p>
+    </div>
+    <div class="col-xs-12">
+        <p>{{ doc.full_name}}</p>
+    </div>
+    <div class="col-xs-12">
+        <p><strong>{{_("Booking Date")}}</strong></p>
+    </div>
+    <div class="col-xs-12">
+        <p>{{ frappe.utils.getdate(doc.booking_date).strftime("%B %d, %Y") }}</p>
+    </div>
+    <div class="col-xs-12">
+        <p><strong>{{_("Service Address")}}</strong></p>
+    </div>
+    <div class="col-xs-12">
+        <p>{{ doc.customer_address_without_country }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-bordered">
+            <thead>
+                {%- if si.total_items_wise_discount and si.total_items_wise_discount > 0 -%}
+                    <th style="width:35%;">{{_("Service Type")}}</th>
+                    <th style="width:15%;">{{_("Target")}}</th>
+                    <th style="width:8%;" class='text-center'>{{_("Qty")}}</th>
+                    <th style="width:12%;" class="text-right">{{_("Rate")}}</th>
+                    <th style="width:15%;" class="text-right">{{_("Discount Amount")}}</th>
+                    <th style="width:15%;" class="text-right">{{_("Amount")}}</th>
+                {%- else -%}
+                    <th style="width:30%;">{{_("Service Type")}}</th>
+                    <th style="width:20%;">{{_("Target")}}</th>
+                    <th style="width:10%;" class='text-center'>{{_("Qty")}}</th>
+                    <th style="width:20%;" class="text-right">{{_("Rate")}}</th>
+                    <th style="width:20%;" class="text-right">{{_("Amount")}}</th>
+                {%- endif -%}
+            </thead>
+            <tbody>
+                {%- for item in si.items -%}
+                    <tr>
+                        {%- if item.discount_amount and item.discount_amount > 0 -%}
+                            <td style="width:35%;">{{item.disinfection_system}}</td>
+                            <td style="width:15%;">{{item.item_name }}</td>
+                            <td style="width:8%;" class="text-center">{{frappe.utils.cint(item.qty) }}</td>
+                            <td style="width:12%;" class="text-right">{{frappe.utils.fmt_money(item.price_list_rate, 2, "USD")}}</td>
+                            <td style="width:15%;" class="text-right">{{frappe.utils.fmt_money(-item.discount_amount*item.qty, 2, "USD")}}</td>
+                            <td style="width:15%;" class="text-right">{{frappe.utils.fmt_money(item.amount, 2, "USD") }}</td>
+                        {%- else -%}
+                            <td style="width:30%;">{{item.disinfection_system}}</td>
+                            <td style="width:20%;">{{item.item_name }}</td>
+                            <td style="width:10%;" class="text-center">{{frappe.utils.cint(item.qty) }}</td>
+                            <td style="width:20%;" class="text-right">{{frappe.utils.fmt_money(item.price_list_rate, 2, "USD")}}</td>
+                            <td style="width:20%;" class="text-right">{{frappe.utils.fmt_money(item.amount, 2, "USD") }}</td>
+                        {%- endif -%}
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+        <table style="width:100%;line-height:.9em;">
+                <tbody>
+                    <tr>
+                        <td style="width:60%;" colspan="3"></td>
+                        <td style="width:20%;"><strong>{{ _("Total Targets")}}</strong></td>
+                        <td style="width:30%;" class="text-right">{{ _(frappe.utils.cint(si.total_qty) )}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:60%;" colspan="3"></td>
+                        <td style="width:20%;"><strong>{{ _("Subtotal")}}</strong></td>
+                        <td style="width:30%;" class="text-right">{{ frappe.utils.fmt_money(si.total, 2, "USD")}}</td>
+                    </tr>
+                    <!--
+                    {%- if si.discount_amount -%}
+                        <tr>
+                            <td style="width:60%;" colspan="3"></td>
+                            <td style="width:20%;"><strong>{{ _("Discount")}}</strong></td>
+                            <td style="width:30%;" class="text-right">{{ frappe.utils.fmt_money(-si.discount_amount, 2, "USD")}}</td>
+                        </tr>
+			             <tr>
+                            <td style="width:60%;" colspan="3"></td>
+                            <td style="width:20%;"><strong>{{ _("Adjusted Subtotal")}}</strong></td>
+                            <td style="width:30%;" class="text-right">{{ frappe.utils.fmt_money(si.net_total, 2, "USD")}}</td>
+                        </tr>
+                    {%- endif -%}
+                    !-->
+                    <tr>
+                        <td style="width:60%;" colspan="3"></td>
+                        <td style="width:20%;"><strong>{{ _("Taxes")}}</strong></td>
+                        <td style="width:30%;" class="text-right">{{ frappe.utils.fmt_money(si.total_taxes_and_charges, 2, "USD")}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:60%;" colspan="3"></td>
+                        <td style="width:20%;"><strong>{{ _("Total")}}</strong></td>
+                        <td style="width:30%;" class="text-right">{{ frappe.utils.fmt_money(si.grand_total, 2, "USD") }}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>

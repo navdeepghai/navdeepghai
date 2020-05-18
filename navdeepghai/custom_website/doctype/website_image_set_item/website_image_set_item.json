@@ -1,0 +1,73 @@
+{
+ "autoname": "format:{parent}-.###",
+ "creation": "2020-04-08 12:13:33.101747",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "min_width",
+  "max_width",
+  "min_height",
+  "max_height",
+  "column_break_5",
+  "image_alt",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "min_width",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Min Width",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_width",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Max Width",
+   "reqd": 1
+  },
+  {
+   "fieldname": "min_height",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Min Height",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_height",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Max Height",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "image_alt",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Image Alt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-08 12:21:31.951063",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Image Set Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

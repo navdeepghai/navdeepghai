@@ -1,0 +1,412 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:company",
+ "creation": "2020-04-14 21:23:03.943590",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "services_items_sb_section",
+  "service_items",
+  "company_settings_residential_service_items_sb_section",
+  "residential_items",
+  "company_settings_vehicle_service_sb_section",
+  "vehicle_items",
+  "price_list_info_section",
+  "default_selling_price_list",
+  "price_list_info_column",
+  "default_buying_price_list",
+  "default_company_location_info_sb_section",
+  "city",
+  "state",
+  "country",
+  "street_name",
+  "zip_code",
+  "default_company_location_info_sb_column",
+  "latitude",
+  "longitude",
+  "complete_address",
+  "pricing_information_sb_section",
+  "commercial",
+  "room",
+  "pricing_information_cb_column",
+  "kitchen",
+  "staircase",
+  "zip_code_items_sb_section",
+  "zip_code_items",
+  "commercial_service_info_section",
+  "items_details_sb_section",
+  "commercial_item",
+  "residential_item",
+  "item_information_cb_column",
+  "vehicle_item",
+  "accounting_information_section",
+  "default_debit_to",
+  "default_income_account",
+  "accounting_information_cb_column",
+  "default_credit_to",
+  "default_expense_account",
+  "cost_center_information_sb_section",
+  "default_cost_center",
+  "bank_account_settings_sb_section",
+  "default_bank_account",
+  "payment_gateway",
+  "bank_information_cb_column",
+  "default_mode_of_payment",
+  "default_currency",
+  "standard_time_to_travel",
+  "tax_information_sb_section",
+  "nj_tax",
+  "column_break_53",
+  "ny_tax",
+  "calendard_information_sb_section",
+  "enable_calendar"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "services_items_sb_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "service_items",
+   "fieldtype": "Table",
+   "label": "Commercial Items",
+   "options": "Company Settings Commercial Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_list_info_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "default_selling_price_list",
+   "fieldtype": "Link",
+   "label": "Default Selling Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_buying_price_list",
+   "fieldtype": "Link",
+   "label": "Default Buying Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_list_info_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_company_location_info_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "default_company_location_info_sb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "street_name",
+   "fieldtype": "Data",
+   "label": "Street Name"
+  },
+  {
+   "fieldname": "zip_code",
+   "fieldtype": "Data",
+   "label": "Zip Code"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "complete_address",
+   "fieldtype": "Small Text",
+   "label": "Complete Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pricing_information_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing Information"
+  },
+  {
+   "description": "Per Square Foot",
+   "fieldname": "commercial",
+   "fieldtype": "Currency",
+   "label": "Commercial"
+  },
+  {
+   "description": "Per Room",
+   "fieldname": "room",
+   "fieldtype": "Currency",
+   "label": "Room"
+  },
+  {
+   "fieldname": "pricing_information_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Per Kitchen",
+   "fieldname": "kitchen",
+   "fieldtype": "Currency",
+   "label": "Kitchen"
+  },
+  {
+   "description": "Per Staircase",
+   "fieldname": "staircase",
+   "fieldtype": "Currency",
+   "label": "Staircase"
+  },
+  {
+   "fieldname": "zip_code_items_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Zip Code Items"
+  },
+  {
+   "fieldname": "zip_code_items",
+   "fieldtype": "Table",
+   "label": "Zip Code Items",
+   "options": "Company Settings Zip Code Item"
+  },
+  {
+   "fieldname": "commercial_service_info_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Service Info"
+  },
+  {
+   "fieldname": "company_settings_residential_service_items_sb_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "residential_items",
+   "fieldtype": "Table",
+   "label": "Residential Items",
+   "options": "Company Settings Residential Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_settings_vehicle_service_sb_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_items",
+   "fieldtype": "Table",
+   "label": "Vehicle Items",
+   "options": "Company Settings Vehicle Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "items_details_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Items Details"
+  },
+  {
+   "fieldname": "commercial_item",
+   "fieldtype": "Link",
+   "label": "Commercial Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "residential_item",
+   "fieldtype": "Link",
+   "label": "Residential Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_item",
+   "fieldtype": "Link",
+   "label": "Vehicle Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accounting_information_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Information"
+  },
+  {
+   "fieldname": "accounting_information_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_information_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_center_information_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Center Information "
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_debit_to",
+   "fieldtype": "Link",
+   "label": "Default Debit To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Income Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_credit_to",
+   "fieldtype": "Link",
+   "label": "Default Credit To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_expense_account",
+   "fieldtype": "Link",
+   "label": "Default Expense Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank_account_settings_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Account"
+  },
+  {
+   "fieldname": "default_bank_account",
+   "fieldtype": "Link",
+   "label": "Default Bank Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank_information_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Default Mode of Payment",
+   "options": "Mode of Payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_gateway",
+   "fieldtype": "Link",
+   "label": "Payment Gateway",
+   "options": "Payment Gateway",
+   "reqd": 1
+  },
+  {
+   "description": "In Minutes",
+   "fieldname": "standard_time_to_travel",
+   "fieldtype": "Int",
+   "label": "Standard Time to Travel"
+  },
+  {
+   "fieldname": "tax_information_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Information"
+  },
+  {
+   "fieldname": "nj_tax",
+   "fieldtype": "Link",
+   "label": "NJ Tax",
+   "options": "Sales Taxes and Charges Template",
+   "precision": "3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_53",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ny_tax",
+   "fieldtype": "Link",
+   "label": "NY Tax",
+   "options": "Sales Taxes and Charges Template",
+   "precision": "3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "calendard_information_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Calendard Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_calendar",
+   "fieldtype": "Check",
+   "label": "Enable Calendar"
+  }
+ ],
+ "modified": "2020-05-06 11:52:35.867699",
+ "modified_by": "support@mygermbusters.com",
+ "module": "Germbusters",
+ "name": "Company Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

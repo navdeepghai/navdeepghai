@@ -1,0 +1,50 @@
+{% extends "templates/web.html" %}
+
+{% block title %} Payment {% endblock %}
+
+{%- block header -%}
+{% endblock %}
+
+{% block script %}
+<script src="https://js.stripe.com/v3/"></script>
+<script>{% include "frappe/templates/includes/integrations/stripe_checkout.js" %}</script>
+{% endblock %}
+
+{%- block page_content -%}
+<div class="stripe row" style="min-height: 400px;">
+	<div class="col-md-6" style="margin:auto;">
+		{% if image %}
+			<img src={{image}}>
+		{% endif %}
+		<form id="payment-form" class="align-items-center"">
+			<section>
+				<h2 class="text-center">{{ description}}</h2>
+	            <label>
+	              <span>{{_("Name")}}</span>
+	              <input id="cardholder-name" name="cardholder-name" class="field form-control"
+						  placeholder="{{ _('John Doe') }}" value="{{payer_name}}">
+	            </label>
+	            <label>
+	              <span>{{_("Email")}}</span>
+	              <input id="cardholder-email" name="cardholder-email" class="field form-control"
+								  placeholder="{{ _('john@doe.com') }}" value="{{payer_email}}">
+	            </label>
+				<label>
+	              <span>{{_("Card Details")}}</span>
+				  <div id="card-element" name="card-element" class="field"
+				  		style="border: 1px solid #ced4da!important;outline: none;box-shadow: none;">
+					</div>
+				  <div id="card-errors" role="alert"></div>
+	            </label>
+				<label>
+					<button type="submit" class="submit btn btn-primary" id="submit" style="float:right">{{_('Pay')}} {{amount}}</button>
+				</label>
+				<div class="outcome">
+					<div class="error" hidden>{{ _("An error occured during the payment process. Please contact us.") }}</div>
+					<div class="success" hidden>{{ _("Your payment has been successfully registered.") }}</div>
+				</div>
+			</section>
+		</form>
+	</div>
+</div>
+{% endblock %}
