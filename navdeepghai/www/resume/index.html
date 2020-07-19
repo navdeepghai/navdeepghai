@@ -1,0 +1,125 @@
+{%- extends "navdeepghai/templates/web.html" -%}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{%- block style -%}
+    <style>
+        {%- include "navdeepghai/templates/includes/resume/resume.css" -%}
+        .job-summary li{
+            list-style: inside !important;
+        }
+        .sectionTitle h2 {
+            font-size: 1em;
+            color: #cf8a05;
+        }
+        .subDetails{
+            color: #cf8a05;
+        }
+    </style>
+{%- endblock -%}
+{%- block page_content -%}
+    <div id="navdeepghai-section-1585967492891" class="navdeepghai-section index-section">
+        <div class="page-width">
+            <div id="top">
+                <div id="cv" class="instaFade">
+                    <div class="mainDetails">
+                        <div id="headshot" class="quickFade">
+                            <img src="{{resume.image}}" alt="resume.full_name" />
+                        </div>
+                        <div id="name">
+                            <h2 class="quickFade delayTwo">{{ resume.full_name }}</h2>
+                            <h4 class="quickFade delayThree">{{ resume.job_title }}</h4>
+                        </div>
+                        <div id="contactDetails" class="quickFade delayFour">
+                            <ul>
+                                <li>e: <a href="mailto:{{resume.email}}" target="_blank">{{resume.email}}</a></li>
+                                <li>m: {{ resume.mobile }}</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div id="mainArea" class="quickFade delayFive">
+                        <section>
+                                    <article>
+                                        <div class="sectionTitle">
+                                            <h2 class="h2"><strong>{{ resume.profile_summary_title }}</strong></h2>
+                                        </div>
+                                            <div class="sectionContent">
+                                                <table class="table table-striped">
+                                                    <tbody><tr><td>
+                                                        {{ resume.profile_summary }}
+                                                    </td></tr></tbody>
+                                                </table>
+                                            </div>
+                                    </article>
+                            <div class="clear"></div>
+                        </section>
+                        <section>
+                            <div class="sectionTitle">
+                                <h2 class="h2"><strong>{{ resume.work_experience_title}}</strong></h2>
+                            </div>
+                            <div class="sectionContent">
+                                {%- for job in resume.experiences -%}
+                                    <table class="table table-striped"><tbody>
+                                        <tr><td>
+                                            <article>
+                                                <h4>{{job.job_title }}</h4>
+                                                <p class="subDetails">
+                                                        {{_("From ")}} {{frappe.utils.getdate(job.from_date).strftime("%b %d, %Y")}}
+                                                        {{_("To ")}}{{ frappe.utils.getdate(job.to_date).strftime("%b %d, %Y") }}
+                                                </p>
+                                                {%- if job.summary -%}
+                                                    <div class="job-summary">{{ job.summary or "" }}</div>
+                                                {%- endif -%}
+                                            </article>
+                                        </td></tr>
+                                    </tbody></table>
+                                {%- endfor -%}
+                            </div>
+                            <div class="clear"></div>
+                        </section>
+                        <section>
+                            <div class="sectionTitle">
+                                <h2 class="h2"><strong>{{resume.skill_title }}</strong></h2>
+                            </div>
+                            <div class="sectionContent">
+                                <table class="keySkills table table-borderless" >
+                                    <tbody>
+                                        {%- for skill in resume.skills -%}
+                                            <tr style="background-color: rgba(0, 0, 0, 0.05);">
+                                                <td style="width:45%;">{{ skill.skill}}</td>
+                                                <td style="width:55%;">{{ skill.experience}}</td>
+                                            </tr>
+                                        {%- endfor -%}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="clear"></div>
+                        </section>
+                        <section>
+                            <div class="sectionTitle">
+                                <h2 class="h2"><strong>{{ resume.education_title }}</strong></h2>
+                            </div>
+                            <div class="sectionContent">
+                                <table class="table table-borderless table-sm"style="padding:0; margin:0"><tbody>
+                                    {% for edu in resume.educations -%}
+                                        <tr style="background-color: rgba(0, 0, 0, 0.05);"><td>
+                                            <article>
+                                                <h4>{{ edu.college }}</h4>
+                                                <p class="subDetails">{{edu.qualification}}</p>
+                                                {{edu.summary }}
+                                            </article>
+                                        </td></tr>
+                                    {%- endfor -%}
+                                </tbody></table>
+                            </div>
+                            <div class="clear"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endblock -%}
+{%- block script -%}
+{%- endblock -%}

@@ -3,21 +3,22 @@ from __future__ import unicode_literals
 from frappe import _
 
 def get_data():
-	return [
-		{
-			"module_name": "Germbusters",
+	return [{
+			"module_name": "NavdeepGhai",
 			"color": "grey",
-			"icon": "octicon octicon-file-directory",
+			"icon": "octicon octicon-settings",
 			"type": "module",
-			"label": _("Germbusters")
+			"label": _("Navdeep Ghai")
 		},{
-			"module_name": "Tracking",
-			"icon": "fas fa-search-location",
+			"module_name": "Dashboard",
+			"color": "grey",
+			"icon": "octicon octicon-dashboard",
 			"type": "module",
-			"label": _("Tracking")
+			"label": _("Dashboard")
 		},{
-			"module_name": "Germbusters",
+			"module_name": "Custom Website",
+			"color": "grey",
+			"icon": "fa fa-safari",
 			"type": "module",
-			"label": _("Germbusters")
-		}
-	]
+			"label": _("Custom Website")
+		}]

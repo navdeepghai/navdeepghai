@@ -1,0 +1,48 @@
+{
+ "cards": [],
+ "category": "Modules",
+ "charts": [],
+ "creation": "2020-05-26 02:05:25.592238",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Custom Website",
+ "modified": "2020-05-26 02:08:14.467614",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Custom Website",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "label": "Website Resume",
+   "link_to": "Website Resume",
+   "type": "DocType"
+  },
+  {
+   "label": "Websites Settings",
+   "link_to": "Websites Settings",
+   "type": "DocType"
+  },
+  {
+   "label": "Websites Settings",
+   "link_to": "Websites Settings",
+   "type": "DocType"
+  },
+  {
+   "label": "Websites Settings",
+   "link_to": "Websites Settings",
+   "type": "DocType"
+  },
+  {
+   "label": "Websites Settings",
+   "link_to": "Websites Settings",
+   "type": "DocType"
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "creation": "2020-05-19 00:53:13.489471",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "background_image",
+  "website_route",
+  "section",
+  "title",
+  "column_break_4",
+  "sub_image",
+  "route",
+  "button_title",
+  "image_set",
+  "section_break_8",
+  "text"
+ ],
+ "fields": [
+  {
+   "fieldname": "background_image",
+   "fieldtype": "Attach Image",
+   "label": "Background Image"
+  },
+  {
+   "fieldname": "website_route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website Route"
+  },
+  {
+   "default": "Main",
+   "fieldname": "section",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "Main\nMiddle\nBottom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_image",
+   "fieldtype": "Attach Image",
+   "label": "Sub Image"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "button_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Button Title"
+  },
+  {
+   "fieldname": "image_set",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Image Set",
+   "options": "Website Image Set"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Text"
+  }
+ ],
+ "image_field": "background_image",
+ "istable": 1,
+ "links": [],
+ "modified": "2020-05-19 00:53:13.489471",
+ "modified_by": "Administrator",
+ "module": "Custom Website",
+ "name": "Website Image Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "route",
+ "track_changes": 1
+}

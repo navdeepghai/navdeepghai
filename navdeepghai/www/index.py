@@ -37,5 +37,7 @@ def get_images(website_route):
             image.image_set = frappe.get_doc("Website Image Set", image.image_set).as_dict().get("images")
         else:
             image.image_set = []
+        image.images = frappe.db.sql("""SELECT * FROM `tabWebsite Image Item` WHERE
+                    `tabWebsite Image Item`.parent='%s' """%(image.name), as_dict=True)
         images.append(image)
     return images

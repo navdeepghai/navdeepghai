@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "naming_series:",
  "creation": "2020-04-05 21:46:15.924774",
  "doctype": "DocType",
@@ -16,7 +17,10 @@
   "image_set",
   "section_break_8",
   "text",
-  "naming_series"
+  "naming_series",
+  "website_image_items_sb_section",
+  "images",
+  "is_carousel"
  ],
  "fields": [
   {
@@ -45,7 +49,7 @@
   {
    "default": "WI-.#######",
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Naming Series",
    "options": "WI-.#######",
    "reqd": 1
@@ -87,10 +91,27 @@
    "fieldtype": "Link",
    "label": "Image Set",
    "options": "Website Image Set"
+  },
+  {
+   "fieldname": "website_image_items_sb_section",
+   "fieldtype": "Section Break",
+   "label": "Images"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "options": "Website Image Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_carousel",
+   "fieldtype": "Check",
+   "label": "Is Carousel"
   }
  ],
  "image_field": "background_image",
- "modified": "2020-04-08 12:17:53.668956",
+ "links": [],
+ "modified": "2020-05-19 00:55:00.708847",
  "modified_by": "Administrator",
  "module": "Custom Website",
  "name": "Website Image",

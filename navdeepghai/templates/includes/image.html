@@ -1,5 +1,5 @@
 {%- if image -%}
-    <div id="germbusters-section-hero-1" class="germbusters-section index-section index-section--flush">
+    <div id="navdeepghai-section-hero-1" class="navdeepghai-section index-section index-section--flush">
         {%- if image.image_set -%}
             <ul class="image-set hidden" data-image-name="{{ image.name }}">
                 {%- for img in image.image_set or [] -%}
@@ -54,7 +54,7 @@
                         background-image: url('{{image.background_image}}');"
                     id="{{ image.name }}">
                 </div>
-                <div class="germbusters-section index-section">
+                <div class="navdeepghai-section index-section">
                     <div class="page-width">
                         <div class="grid grid--uniform grid--flush-bottom">
                             <div class="grid__item medium-up--one-half text-left">
@@ -85,7 +85,7 @@
                     id="{{ image.name }}">
 
                 </div>
-                <div class="germbusters-section index-section" style="margin-bottom:40px;">
+                <div class="navdeepghai-section index-section" style="margin-bottom:40px;">
                     <div class="page-width">
                         <h1  class="headling-title">{{ image.title  or '' }}</h1>
                         <p>{{ image.text}}</p>
