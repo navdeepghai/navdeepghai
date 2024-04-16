@@ -6,7 +6,7 @@ frappe.provide("booking");
 frappe.provide("navdeepghai");
 
 $(document).ready(function(){
-    if(frappe.boot.dashboard_roles.hasOwnProperty(frappe.user.name)){
+    if(frappe.boot.dashboard_roles  && frappe.boot.dashboard_roles.hasOwnProperty(frappe.user.name)){
         window.location.href = frappe.utils.format("/dashboard?dashboard={0}",
                     [encodeURI(frappe.boot.dashboard_roles[frappe.user.name][0])]);
     }

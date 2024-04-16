@@ -10,6 +10,7 @@ def update_website_context(context):
     # Update all the default context values
     update_meta_tags(context)
     system_defaults = get_default_settings()
+    '''
     context.update({
         "defaults": system_defaults,
         "hide_login": True,
@@ -18,6 +19,7 @@ def update_website_context(context):
         },
         "footer_settings": frappe.get_doc("Footer Settings", "Footer Settings")
     })
+    '''
     update_boot_context(context)
 
 

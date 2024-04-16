@@ -11,18 +11,18 @@ app_color = "grey"
 app_email = "navdeepghai1@gmail.com"
 app_license = "MIT"
 
-app_logo_url = '/assets/navdeepghai/images/social-logo.png'
+app_logo_url = '/assets/navdeepghai/images/social-logo.jpg'
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
 app_include_css = [
     "https://fonts.googleapis.com/css?family=Montserrat",
-    "/assets/css/navdeepghai.app.min.css",
+    "navdeepghai.bundle.css",
 ]
 
 app_include_js = [
-    "/assets/js/navdeepghai.app.min.js",
+    "navdeepghai.bundle.js",
 ]
 
 # include js, css files in header of web template
