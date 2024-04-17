@@ -78,9 +78,9 @@
 		{%- endfor -%}
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 		<link type="text/css" rel="stylesheet" href="/assets/css/frappe-web-b4.css">
-		<link type="text/css" rel="stylesheet" href="/assets/css/germbusters.lib.min.css"/>
-		<link type="text/css" rel="stylesheet" href="/assets/css/germbusters.web.min.css"/>
-		<link type="text/css" rel="stylesheet" href="/assets/css/germbusters-dashboard-min.css"/>
+		<link type="text/css" rel="stylesheet" href="/assets/css/navdeepghai.lib.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/assets/css/navdeepghai.web.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/assets/css/navdeepghai-dashboard-min.css"/>
 		<style>
 		body{
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -134,14 +134,9 @@
     </script>
 </head>
 <body class="template-index c-app" frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}" data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {% endif -%}>
-	<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW3MQRX"
-			height="0" width="0" style="display:none;visibility:hidden">
-		</iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	{%- include "germbusters/templates/dashboard/sidebar.html" -%}
+	{%- include "navdeepghai/templates/dashboard/sidebar.html" -%}
 	<div class="c-wrapper c-fixed-components">
-		{% include "germbusters/templates/dashboard/header.html" %}
+		{% include "navdeepghai/templates/dashboard/header.html" %}
 		<div class="c-body">
 
 			{% block content %}
@@ -149,7 +144,7 @@
 			{% endblock %}
 
 			{%- block footer -%}
-				{% include "germbusters/templates/dashboard/footer.html" %}
+				{% include "navdeepghai/templates/dashboard/footer.html" %}
 			{%- endblock -%}
 		</div>
 	</div>
@@ -157,9 +152,9 @@
 	<!-- js should be loaded in body! -->
 
 	<!-- load default libs!-->
-	<script tyle="text/javascript" src="/assets/js/germbusters.lib.min.js"></script>
+	<script tyle="text/javascript" src="/assets/js/navdeepghai.lib.min.js"></script>
 	<script type="text/javascript" src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/assets/js/germbusters-dashboard.min.js"></script>
+	<script type="text/javascript" src="/assets/js/navdeepghai-dashboard.min.js"></script>
 
 	{% endblock %}
 
