@@ -10,9 +10,7 @@ import os, importlib
 APP_NAME  = "navdeepghai"
 BASE_FOLDER = "document_controllers"
 
-ALLOWED_DOCTYPES = [
-	'Task', 'Payment Entry', 'Sales Invoice'
-	]
+ALLOWED_DOCTYPES = []
 
 '''
 	Base handler for all the document controller
