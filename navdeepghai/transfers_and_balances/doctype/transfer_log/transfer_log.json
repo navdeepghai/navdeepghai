@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-26 14:28:50.571397",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transfer_date",
+  "posting_date",
+  "column_break_isvo",
+  "total_transfer",
+  "transfer_method",
+  "section_break_enqu",
+  "transfer_to",
+  "column_break_wrws",
+  "transfer_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "transfer_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transfer Date"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_isvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_transfer",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Transfer"
+  },
+  {
+   "fieldname": "transfer_method",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Transfer Method"
+  },
+  {
+   "fieldname": "section_break_enqu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transfer_to",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Transfer To"
+  },
+  {
+   "fieldname": "column_break_wrws",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transfer_by",
+   "fieldtype": "Small Text",
+   "label": "Transfer By"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-28 12:29:03.581222",
+ "modified_by": "Administrator",
+ "module": "Transfers and Balances",
+ "name": "Transfer Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

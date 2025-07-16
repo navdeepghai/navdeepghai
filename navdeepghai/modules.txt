@@ -1,2 +1,4 @@
 Custom Website
 Dashboard
+nav_projects
+Transfers and Balances
