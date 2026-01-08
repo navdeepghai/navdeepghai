@@ -3,6 +3,7 @@
 
 import frappe
 from frappe import _
+from frappe.utils import fmt_money, flt
 
 
 def execute(filters: dict | None = None):
@@ -39,7 +40,7 @@ def get_columns() -> list[dict]:
 		},{
 			"label": _("Total Transfer"),
 			"fieldname": "total_transfer",
-			"fieldtype": "Currency"
+			"fieldtype": "Data"
 		},{
 			"label": _("Transfer Method"),
 			"fieldname": "transfer_method",
@@ -55,6 +56,14 @@ def get_data() -> list[frappe._dict]:
 	"""
 	results = []
 	for item in frappe.get_all("Transfer Log", fields="*"):
+		item.total = item.total_transfer
+		item.total_transfer = fmt_money(item.total_transfer, currency="INR")
 		results.append(item)
-	
+
+	total_row = sum([flt(t.total) for t in results])
+	results.append({
+		"transfer_to": "Total",
+		"total_transfer": fmt_money(total_row, currency="INR"),
+	})
+
 	return results
