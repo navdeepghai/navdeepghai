@@ -8,19 +8,12 @@ import json
 
 def update_website_context(context):
     # Update all the default context values
-    update_meta_tags(context)
-    system_defaults = get_default_settings()
-    '''
-    context.update({
-        "defaults": system_defaults,
-        "hide_login": True,
-        "boot":{
-            "sysdefaults":get_default_settings()
-        },
-        "footer_settings": frappe.get_doc("Footer Settings", "Footer Settings")
-    })
-    '''
-    update_boot_context(context)
+    try:
+        update_meta_tags(context)
+        system_defaults = get_default_settings()
+        update_boot_context(context)
+    except Exception:
+        frappe.logger().error("Failed to update website context", exc_info=True)
 
 
 def update_meta_tags(context):
